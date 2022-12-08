@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="ot.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">Agri-Bot</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="ot.html">
+          <i class='bx bx-group'></i>
+          <span class="links_name">Our Team</span>
+        </a>
+         <span class="tooltip">Our Team</span>
+      </li>
+      <li>
+        <a href="cont.html">
+          <i class='bx bx-phone-call'></i>
+          <span class="links_name">Contact Us</span>
+        </a>
+         <span class="tooltip">Contact Us</span>
+      </li>
+      <li>
+        <a href="dash.html">
+          <i class='bx bxs-dashboard'></i>
+          <span class="links_name">Dash Board</span>
+        </a>
+         <span class="tooltip">Dash Board</span>
+      </li>
+    </ul>
+  </div>
+      
+    <section id="ourteam">
+        <div class="head">
+          <h3>Our Team</h3>
+        </div>
+        <hr>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="pjk.png">
+                    </div>
+                    <h3 class="title">Pranav . J . Kumar</h3>
+                    <span class="post">jayakumarokm@gmail.com</span>
+                </div>
+            </div>
+     
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="kavin.png">
+                    </div>
+                    <h3 class="title">Kavin Sandron</h3>
+                    <span class="post">sekarkavin1@gmail.com</span>
+                </div>
+            </div>
+    
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="jay.png">
+                    </div>
+                    <h3 class="title">Jay Shyamalan</h3>
+                    <span class="post">jayshyamalan312@gmail.com</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="asrit.png">
+                    </div>
+                    <h3 class="title">Asrit Akilan</h3>
+                    <span class="post">asritakilan@gmail.com</span>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="guhan.png">
+                    </div>
+                    <h3 class="title">Guhan</h3>
+                    <span class="post">guhanaravindan822@gmail  <br> .com</span>
+                </div>
+            </div>
+    
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="nishant.png">
+                    </div>
+                    <h3 class="title">Nishant Krishna</h3>
+                    <span class="post">Rknkonline47@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+              <div class="our-team">
+                  <div class="pic">
+                      <img src="psp.png">
+                  </div>
+                  <h3 class="title">Pranav Sastha Pillai</h3>
+                  <span class="post">PranavSP@gmail.com</span>
+              </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="our-team">
+                <div class="pic">
+                    <img src="raj.png">
+                </div>
+                <h3 class="title">S.Sarvesh raj</h3>
+                <span class="post">drsabarimds@gmail.com</span>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+    </section>
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+      
+        closeBtn.addEventListener("click", ()=>{
+          sidebar.classList.toggle("open");
+          menuBtnChange();//calling the function(optional)
+        });
+      
+        searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+          sidebar.classList.toggle("open");
+          menuBtnChange(); //calling the function(optional)
+        });
+      
+        // following are the code to change sidebar button(optional)
+        function menuBtnChange() {
+         if(sidebar.classList.contains("open")){
+           closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+         }else {
+           closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+         }
+        }
+        </script>
+</body>
+</html>
