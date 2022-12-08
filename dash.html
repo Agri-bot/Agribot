@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="dash.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">Agri-Bot</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="ot.html">
+          <i class='bx bx-group'></i>
+          <span class="links_name">Our Team</span>
+        </a>
+         <span class="tooltip">Our Team</span>
+      </li>
+      <li>
+        <a href="cont.html">
+          <i class='bx bx-phone-call'></i>
+          <span class="links_name">Contact Us</span>
+        </a>
+         <span class="tooltip">Contact Us</span>
+      </li>
+      <li>
+        <a href="dash.html">
+          <i class='bx bxs-dashboard'></i>
+          <span class="links_name">Dash Board</span>
+        </a>
+         <span class="tooltip">Dash Board</span>
+      </li>
+    </ul>
+  </div>
+      <section id="dash">
+        <div class="head">
+            <h3>Dash Board</h3>
+        </div><hr>
+        <div class="soilm">
+          <div class="title1">
+            <h1>Soil Moisture Values:</h1>
+          </div>
+          <div class="1">
+            <h2>Soil Moisture 1:</h2>
+            <span id="value1"></span>%
+          </div>
+          <div class="2">
+            <h2>Soil Moisture 2:</h2>
+            <span id="value2"></span>%
+          </div>
+          <div class="3">
+            <h2>Soil Moisture 3:</h2>
+            <span id="value3"></span>%
+          </div>
+          <div class="4">
+            <h2>Soil Moisture 4:</h2>
+            <span id="value4"></span>%
+          </div>
+        </div>
+           <div class="th">
+          <div class="title2">
+            <h1>Atmospheric Values:</h1>
+          </div>
+          <div class="1">
+            <h2>Temperature:</h2>
+            <span id="value5"></span>C
+          </div>
+          <div class="2">
+            <h2>Humididty</h2>
+            <span id="value6"></span>%
+          </div>
+          <div class="3">
+            <h2>Methene</h2>
+            <span id="value7"></span>ppm, It is safe below 250ppm
+          </div>
+          <div class="4">
+            <h2>Rain</h2>
+            <span id="value11"></span>
+          </div>
+        </div>
+        
+      </section>
+      <script src="script.js"></script>
+      <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+      
+        closeBtn.addEventListener("click", ()=>{
+          sidebar.classList.toggle("open");
+          menuBtnChange();//calling the function(optional)
+        });
+      
+        searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+          sidebar.classList.toggle("open");
+          menuBtnChange(); //calling the function(optional)
+        });
+      
+        // following are the code to change sidebar button(optional)
+        function menuBtnChange() {
+         if(sidebar.classList.contains("open")){
+           closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+         }else {
+           closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+         }
+        }
+        </script>
+</body>
+</html>
